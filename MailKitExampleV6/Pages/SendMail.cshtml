@@ -1,0 +1,41 @@
+﻿@page
+@model MailKitExampleV6.Pages.SendMailModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SendMail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SendMail!.SendTo" class="control-label"></label>
+                <input asp-for="SendMail!.SendTo" class="form-control" />
+                <span asp-validation-for="SendMail!.SendTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SendMail!.SendFrom" class="control-label"></label>
+                <input asp-for="SendMail!.SendFrom" class="form-control" />
+                <span asp-validation-for="SendMail!.SendFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SendMail!.Subject" class="control-label"></label>
+                <input asp-for="SendMail!.Subject" class="form-control" />
+                <span asp-validation-for="SendMail!.Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SendMail!.Text " class="control-label"></label>
+                <input asp-for="SendMail!.Text" class="form-control" />
+                <span asp-validation-for="SendMail!.Text" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
